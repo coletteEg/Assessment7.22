@@ -73,6 +73,7 @@ console.log(pizza.tags[1])
 let newPrice = pizza.price = 20
 console.log(newPrice)
 
+
 /*
     Fourth, and last, destructure the category
     property.
@@ -192,12 +193,15 @@ console.log(filteredFood)
     Return the filtered array from the entire function
 */
 
-let filterByProperty = (rating, number, type) => {
+console.log("QUESTION 5")
+
+let filterByProperty = (property, number, type) => {
     let newFoodArr = []
-    rating > number
-    type > 6
+    foodArr.filter(foodArr => foodArr.property )
+    return newFoodArr
 }
 
+console.log(filterByProperty("rating",6,'above'))
 
 /*
     Invoke the `filterByProperty` function passing

@@ -89,10 +89,23 @@ console.log(empTwo)
     The function should push the name into 
     the employees array. 
 */
+empArray = ["sarah", "ron", "jamie"]
 
-//CODE HERE
-
-
+class Manager extends Employee{
+    constructor(name,shifts,employees){
+        super(name,shifts,employees)
+    }
+    getEmployees(){
+        console.log(`${this.name} manages ${empArray}`)
+    }
+    addEmployee(emp){
+        empArray.push(emp)
+    }
+}
+let man1 = new Manager("Bekka")
+man1.getEmployees()
+man1.addEmployee("kate")
+console.log(empArray)
 
 /*
     Create a new instance of your class.
@@ -105,23 +118,21 @@ console.log(empTwo)
     employees: Cece and Schmidt
 */
 
-//CODE HERE
-
+let man2 = new Manager("winston","weekdays and sunday morning")
 
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
 
-//CODE HERE
-
+man2.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
     'Coach' or whatever name you'd like.
 */
 
-//CODE HERE 
+man2.addEmployee("Quin")
 
 /*
     Call the `getEmployees` method on the
@@ -129,4 +140,4 @@ console.log(empTwo)
     that an employee was added.
 */
 
-//CODE HERE
+man2.getEmployees()
